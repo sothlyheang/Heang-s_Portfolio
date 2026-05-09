@@ -23,7 +23,7 @@ const Intro = ({ onEnter }) => {
       </div>
 
       <div className="text-center z-10">
-        <div className="relative mx-auto mb-10 max-w-3xl rounded-[2rem] border border-slate-800 bg-slate-950/95 p-8 shadow-2xl shadow-cyan-500/10 animate-code-panel" style={{ animationDelay: '0.2s' }}>
+        <div className="relative mx-auto mb-10 max-w-3xl rounded-4xl border border-slate-800 bg-slate-950/95 p-8 shadow-2xl shadow-cyan-500/10 animate-code-panel" style={{ animationDelay: '0.2s' }}>
           <div className="mb-6 text-left text-sm font-mono text-slate-400">
             <div className="mb-3 opacity-90">const welcome = &#123;</div>
             <div className="ml-6 mb-2">name: <span className="text-cyan-300">'Soth Lyheang'</span>,</div>
