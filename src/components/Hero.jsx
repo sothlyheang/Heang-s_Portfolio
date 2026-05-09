@@ -87,7 +87,7 @@ const Hero = () => {
 
               {/* Visible typing */}
               <span className="relative">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+                <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500">
                   {typedTitle}
                 </span>
 
