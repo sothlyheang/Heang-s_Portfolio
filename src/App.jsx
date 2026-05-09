@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -63,7 +64,12 @@ const App = () => {
   const [showIntro, setShowIntro] = useState(true);
 
   if (showIntro) {
-    return <Intro onEnter={() => setShowIntro(false)} />;
+    return (
+      <>
+        <Intro onEnter={() => setShowIntro(false)} />
+        <SpeedInsights />
+      </>
+    );
   }
 
   return (
@@ -80,6 +86,7 @@ const App = () => {
       </main>
 
       <Footer />
+      <SpeedInsights />
     </div>
   );
 };
