@@ -13,14 +13,14 @@ const Projects = ({ projects = defaultProjects }) => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
             <h2 className="text-3xl md:text-5xl font-bold mb-4">Selected Works</h2>
-            <p className="text-slate-400">A collection of projects that define my technical journey.</p>
+            <p className="text-slate-400 max-w-xl">A curated portfolio of projects that reflect my technical expertise and product-led focus.</p>
           </div>
-          <div className="flex gap-2 p-1 bg-slate-900 rounded-lg border border-slate-800">
+          <div className="flex flex-wrap gap-2 p-2 bg-slate-900 rounded-2xl border border-slate-800">
             {['all', 'frontend', 'backend', 'fullstack'].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`px-4 py-2 rounded-md text-xs font-bold uppercase transition-all ${activeTab === tab ? 'bg-cyan-600 text-white shadow-lg' : 'text-slate-400 hover:text-white'}`}
+                className={`px-4 py-2 rounded-full text-xs font-semibold uppercase transition-all ${activeTab === tab ? 'bg-cyan-600 text-white shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}
               >
                 {tab}
               </button>
@@ -63,7 +63,7 @@ const Projects = ({ projects = defaultProjects }) => {
                 </div>
                 <h3 className="text-xl font-bold mb-2 group-hover:text-cyan-400 transition-colors duration-300 transform group-hover:translate-x-1">{project.title}</h3>
                 <p className="text-sm text-slate-400 leading-relaxed mb-6 flex-1 group-hover:text-slate-300 transition-colors duration-300">{project.desc}</p>
-                <a href={project.link} className="flex items-center gap-2 text-sm font-bold text-cyan-500 hover:text-cyan-400 transition-all duration-300 group-hover:translate-x-1">
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-bold text-cyan-500 hover:text-cyan-400 transition-all duration-300 group-hover:translate-x-1">
                   Case Study <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                 </a>
               </div>

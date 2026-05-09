@@ -13,7 +13,7 @@ const Contact = () => {
     const telegramText = `Hello!%0A%0AName:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0A%0AMessage:%20${encodeURIComponent(message)}`;
     const telegramUrl = `https://t.me/${telegramUsername}?text=${telegramText}`;
 
-    window.open(telegramUrl, '_blank');
+    window.open(telegramUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (

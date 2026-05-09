@@ -42,7 +42,7 @@ const Hero = () => {
   const typedTitle = useTypewriter("Soth Lyheang");
 
   return (
-    <section id="home"className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+    <section id="home" className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
       <div className="absolute inset-0 opacity-20 pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500 rounded-full blur-[120px]" />
         <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500 rounded-full blur-[120px]" />
@@ -87,7 +87,7 @@ const Hero = () => {
 
               {/* Visible typing */}
               <span className="relative">
-                <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
                   {typedTitle}
                 </span>
 
@@ -98,15 +98,14 @@ const Hero = () => {
             </h1>
 
             {/* Paragraph */}
-            <p className="text-lg md:text-xl text-slate-400 leading-relaxed max-w-lg animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
-              HI, I’m{" "}
-              <span className="text-slate-200 font-medium">Soth Lyheang</span>, a Senior
-              Software Engineering specializing in building exceptional digital
-              experiences that are fast, accessible, and visually stunning.
+            <p className="text-lg md:text-xl text-slate-400 leading-relaxed max-w-xl animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
+              HI, I’m <span className="text-slate-200 font-medium">Soth Lyheang</span>, a Senior
+              Software Engineer focused on clean architecture, strong user experiences, and
+              production-ready products for web, mobile, and enterprise teams.
             </p>
 
             {/* Actions */}
-            <div className="flex gap-4 animate-fade-in-up" style={{ animationDelay: '1.1s' }}>
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 animate-fade-in-up" style={{ animationDelay: '1.1s' }}>
 
               <a
                 href="#projects"

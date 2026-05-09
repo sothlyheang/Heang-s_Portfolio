@@ -36,7 +36,7 @@ export const projects = [
 
 export const about = {
   name: "Soth Lyheang",
-  title: "Senior Software Engineering",
+  title: "Senior Software Engineer",
   bio: "Passionate about creating innovative solutions and delivering high-quality software. With over 5 years of experience, I specialize in full-stack development, UI/UX design, and scalable architectures.",
   location: "Phnom Penh, Cambodia",
   email: "sothlyheang9@example.com",
