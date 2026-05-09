@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Code2, ExternalLink } from 'lucide-react';
+import { Award, Code2, ExternalLink } from 'lucide-react';
 import { projects as defaultProjects } from '../data/data';
 
 const Projects = ({ projects = defaultProjects }) => {
@@ -16,13 +16,13 @@ const Projects = ({ projects = defaultProjects }) => {
             <p className="text-slate-400 max-w-xl">A curated portfolio of projects that reflect my technical expertise and product-led focus.</p>
           </div>
           <div className="flex flex-wrap gap-2 p-2 bg-slate-900 rounded-2xl border border-slate-800">
-            {['all', 'frontend', 'backend', 'fullstack'].map((tab) => (
+            {['all', 'frontend', 'backend', 'fullstack', 'certificate'].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={`px-4 py-2 rounded-full text-xs font-semibold uppercase transition-all ${activeTab === tab ? 'bg-cyan-600 text-white shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}
               >
-                {tab}
+                {tab === 'certificate' ? 'certificates' : tab}
               </button>
             ))}
           </div>
@@ -44,6 +44,8 @@ const Projects = ({ projects = defaultProjects }) => {
                     alt={project.title}
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
+                ) : project.category === 'certificate' ? (
+                  <Award className="w-16 h-16 text-cyan-400 transition-transform duration-500 group-hover:scale-110" />
                 ) : (
                   <Code2 className="w-12 h-12 text-slate-700 group-hover:text-cyan-500 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12" />
                 )}
@@ -64,7 +66,7 @@ const Projects = ({ projects = defaultProjects }) => {
                 <h3 className="text-xl font-bold mb-2 group-hover:text-cyan-400 transition-colors duration-300 transform group-hover:translate-x-1">{project.title}</h3>
                 <p className="text-sm text-slate-400 leading-relaxed mb-6 flex-1 group-hover:text-slate-300 transition-colors duration-300">{project.desc}</p>
                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-bold text-cyan-500 hover:text-cyan-400 transition-all duration-300 group-hover:translate-x-1">
-                  Case Study <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                  {project.category === 'certificate' ? 'View Certificate' : 'Case Study'} <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                 </a>
               </div>
             </div>

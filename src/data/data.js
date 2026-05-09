@@ -31,6 +31,20 @@ export const projects = [
     tech: ["Next.js", "Stripe", "Prisma"],
     category: "fullstack",
     link: "#"
+  },
+  {
+    title: "Certification Gallery",
+    desc: "Verified certifications and badges showcasing expertise in cloud, backend, and software architecture.",
+    tech: ["Certificate", "AWS", "Cloud"],
+    category: "certificate",
+    link: "#",
+  },
+  {
+    title: "Professional Dev Badge",
+    desc: "A portfolio badge awarded for excellence in full-stack development and deployment.",
+    tech: ["Award", "Leadership", "Quality"],
+    category: "certificate",
+    link: "#",
   }
 ];
 
