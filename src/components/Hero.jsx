@@ -41,6 +41,73 @@ const useTypewriter = (
 const Hero = () => {
   const typedTitle = useTypewriter("Soth Lyheang");
 
+  const codeLines = [
+    {
+      number: '1',
+      content: <><span className="text-purple-400">const</span> <span className="text-blue-400">developer</span> = {'{'}</>
+    },
+    {
+      number: '2',
+      content: <>name:<span className="text-green-400"> 'Soth Lyheang'</span>,</>
+    },
+    {
+      number: '3',
+      content: <>title:<span className="text-green-400"> 'Senior Software Engineer'</span>,</>
+    },
+    {
+      number: '4',
+      content: <>experience:<span className="text-yellow-400"> '5+ Years'</span>,</>
+    },
+    {
+      number: '5',
+      content: <>location:<span className="text-green-400"> 'Phnom Penh, Cambodia'</span>,</>
+    },
+    {
+      number: '6',
+      content: <>email:<span className="text-green-400"> 'heang@example.com'</span>,</>
+    },
+    {
+      number: '7',
+      content: <>stack: [<span className="text-yellow-400">'React'</span>, <span className="text-yellow-400">'Next.js'</span>, <span className="text-yellow-400">'Node'</span>, <span className="text-yellow-400">'AWS'</span>],</>
+    },
+    {
+      number: '8',
+      content: <>specialties: [<span className="text-cyan-400">'UI/UX'</span>, <span className="text-cyan-400">'Performance'</span>, <span className="text-cyan-400">'Scalability'</span>],</>
+    },
+    {
+      number: '9',
+      content: <>achievements: [</>
+    },
+    {
+      number: '10',
+      content: <span className="text-green-400">'50k+ Users'</span>,
+    },
+    {
+      number: '11',
+      content: <span className="text-green-400">'99.9% Uptime'</span>,
+    },
+    {
+      number: '12',
+      content: <span className="text-green-400">'Top Rated Freelancer'</span>
+    },
+    {
+      number: '13',
+      content: <>],</>
+    },
+    {
+      number: '14',
+      content: <>available: <span className="text-cyan-400">true</span></>
+    },
+    {
+      number: '15',
+      content: <>{'}'};</>
+    },
+    {
+      number: '16',
+      content: <><span className="text-purple-400">export default</span> developer;</>
+    },
+  ];
+
   return (
     <section id="home" className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
       <div className="absolute inset-0 opacity-20 pointer-events-none">
@@ -138,138 +205,36 @@ const Hero = () => {
 
             </div>
           </div>
-<div className="hidden md:block -mt-12">
-  <div className="bg-slate-900 border border-slate-800 rounded-2xl p-1 shadow-2xl">
-    <div className="bg-slate-950 rounded-xl overflow-hidden border border-slate-800">
+          <div className="hidden md:block -mt-12">
+            <div className="bg-slate-900 border border-slate-800 rounded-2xl p-1 shadow-2xl">
+              <div className="bg-slate-950 rounded-xl overflow-hidden border border-slate-800">
 
-      {/* Title Bar */}
-      <div className="flex items-center gap-2 px-4 py-3 bg-slate-900 border-b border-slate-800">
-        <div className="w-3 h-3 rounded-full bg-red-500" />
-        <div className="w-3 h-3 rounded-full bg-yellow-500" />
-        <div className="w-3 h-3 rounded-full bg-green-500" />
+                {/* Title Bar */}
+                <div className="flex items-center gap-2 px-4 py-3 bg-slate-900 border-b border-slate-800">
+                  <div className="w-3 h-3 rounded-full bg-red-500" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                  <div className="w-3 h-3 rounded-full bg-green-500" />
 
-        <div className="ml-4 text-xs font-mono text-slate-500">
-          sothlyheang.profile.js
-        </div>
-      </div>
-
-      <div className="px-6 py-4 space-y-2">
-        {/* Line 1 */}
-        <div className="flex gap-4">
-          <span className="text-slate-600">1</span>
-          <span className="text-purple-400">const</span> <span className="text-blue-400">developer</span> = {"{"}
-        </div>
-
-        {/* Line 2 */}
-        <div className="flex gap-4">
-          <span className="text-slate-600">2</span>
-          <p className="ml-6">name:</p> <span className="text-green-400">'Soth Lyheang'</span>,
-        </div>
-
-                    {/* Line 3 */}
-                    <div className="flex gap-4">
-                      <span className="text-slate-600">3</span>
-                      <p className="ml-6">title:</p> <span className="text-green-400">'Senior Software Engineer'</span>,
-                    </div>
-
-                    {/* Line 4 */}
-                    <div className="flex gap-4">
-                      <span className="text-slate-600">4</span>
-                      <p className="ml-6">experience:</p> <span className="text-yellow-400">'5+ Years'</span>,
-                    </div>
-
-                    {/* Line 5 */}
-                    <div className="flex gap-4">
-                      <span className="text-slate-600">5</span>
-                      <p className="ml-6">location:</p> <span className="text-green-400">'Phnom Penh, Cambodia'</span>,
-                    </div>
-
-                    {/* Line 6 */}
-                    <div className="flex gap-4">
-                      <span className="text-slate-600">6</span>
-                      <p className="ml-6">email:</p> <span className="text-green-400">'heang@example.com'</span>,
-                    </div>
-
-                    {/* Line 7 */}
-                    <div className="flex gap-4">
-                      <span className="text-slate-600">7</span>
-                      stack: [
-                      <span className="text-yellow-400">'React'</span>,{" "}
-                      <span className="text-yellow-400">'Next.js'</span>,{" "}
-                      <span className="text-yellow-400">'Node'</span>,{" "}
-                      <span className="text-yellow-400">'AWS'</span>
-                      ],
-                    </div>
-
-                    {/* Line 8 */}
-                    <div className="flex gap-4">
-                      <span className="text-slate-600">8</span>
-                      specialties: [
-                      <span className="text-cyan-400">'UI/UX'</span>,{" "}
-                      <span className="text-cyan-400">'Performance'</span>,{" "}
-                      <span className="text-cyan-400">'Scalability'</span>
-                      ],
-                    </div>
-                    
-                    {/* Line 9 */}
-                    <div className="flex gap-4">
-                      <span className="text-slate-600">9</span>
-                      achievements: [
-                    </div>
-
-                    {/* Line 10 */}
-                    <div className="flex gap-4 ">
-                      <span className="text-slate-600">10</span>
-                      <span className="text-green-400 ml-6">'50k+ Users'</span>,
-                    </div>
-
-                    {/* Line 11 */}
-                    <div className="flex gap-4 ">
-                      <span className="text-slate-600">11</span>
-                      <span className="text-green-400 ml-6">'99.9% Uptime'</span>,
-                    </div>
-
-                    {/* Line 12 */}
-                    <div className="flex gap-4 ">
-                      <span className="text-slate-600">12</span>
-                      <span className="text-green-400 ml-6">'Top Rated Freelancer'</span>
-                    </div>
-
-                    {/* Line 13 */}
-                    <div className="flex gap-4">
-                      <span className="text-slate-600">13</span>
-                      ],
-                    </div>
-
-                    {/* Line 14 */}
-                    <div className="flex gap-4">
-                      <span className="text-slate-600">14</span>
-                      available: <span className="text-cyan-400">true</span>
-                    </div>
-
-                    {/* Line 15 */}
-                    <div className="flex gap-4">
-                      <span className="text-slate-600">15</span>
-                      {"};"}
-                    </div>
-
-                    {/* Line 16 */}
-                    <div className="flex gap-4">
-                      <span className="text-slate-600">16</span>
-                    </div>
-
-                    {/* Line 17 */}
-                    <div className="flex gap-4">
-                      <span className="text-slate-600">17</span>
-                      <span className="text-purple-400">export default</span>{" "}
-                      developer;
-                    </div>
-
+                  <div className="ml-4 text-xs font-mono text-slate-500">
+                    sothlyheang.profile.js
                   </div>
+                </div>
+
+                <div className="px-6 py-4 space-y-2">
+                  {codeLines.map((line, index) => (
+                    <div key={line.number} className="flex gap-4">
+                      <span className="text-slate-600">{line.number}</span>
+                      <div className="code-line-wrapper" style={{ '--delay': `${0.2 + index * 0.15}s` }}>
+                        <span className="line-content block whitespace-pre text-slate-100">
+                          {line.content}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
-
+          </div>
         </div>
       </div>
     </section>
