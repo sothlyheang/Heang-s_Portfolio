@@ -1,4 +1,5 @@
 import biuImg from '../assets/biu.png';
+import cfImg from '../assets/cf.png';
 
 export const skills = [
   { name: 'React / Next.js', level: '95%' },
@@ -33,19 +34,13 @@ export const projects = [
     link: "#"
   },
   {
+    image: cfImg,
     title: "Certification Gallery",
     desc: "Verified certifications and badges showcasing expertise in cloud, backend, and software architecture.",
     tech: ["Certificate", "AWS", "Cloud"],
     category: "certificate",
-    link: "#",
+    link: "",
   },
-  {
-    title: "Professional Dev Badge",
-    desc: "A portfolio badge awarded for excellence in full-stack development and deployment.",
-    tech: ["Award", "Leadership", "Quality"],
-    category: "certificate",
-    link: "#",
-  }
 ];
 
 export const about = {

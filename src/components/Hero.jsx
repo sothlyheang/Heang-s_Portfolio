@@ -48,23 +48,23 @@ const Hero = () => {
     },
     {
       number: '2',
-      content: <>name:<span className="text-green-400"> 'Soth Lyheang'</span>,</>
+      content: <> <span className="ml-4">name:</span> <span className="text-green-400"> 'Soth Lyheang'</span>,</>
     },
     {
       number: '3',
-      content: <>title:<span className="text-green-400"> 'Senior Software Engineer'</span>,</>
+      content: <> <span className="ml-4">title:</span> <span className="text-green-400"> 'Senior Software Engineer'</span>,</>
     },
     {
       number: '4',
-      content: <>experience:<span className="text-yellow-400"> '5+ Years'</span>,</>
+      content: <> <span className="ml-4">experience:</span> <span span className="text-yellow-400"> '5+ Years'</span>,</>
     },
     {
       number: '5',
-      content: <>location:<span className="text-green-400"> 'Phnom Penh, Cambodia'</span>,</>
+      content: <> <span className="ml-4">location:</span> <span className="text-green-400"> 'Phnom Penh, Cambodia'</span>,</>
     },
     {
       number: '6',
-      content: <>email:<span className="text-green-400"> 'heang@example.com'</span>,</>
+      content: <> <span className="ml-4">email:</span> <span className="text-green-400"> 'heang@example.com'</span>,</>
     },
     {
       number: '7',
@@ -224,7 +224,7 @@ const Hero = () => {
                   {codeLines.map((line, index) => (
                     <div key={line.number} className="flex gap-4">
                       <span className="text-slate-600">{line.number}</span>
-                      <div className="code-line-wrapper" style={{ '--delay': `${0.2 + index * 0.15}s` }}>
+                      <div className="code-line-wrapper" style={{ '--delay': `${0.4 + index * 0.22}s` }}>
                         <span className="line-content block whitespace-pre text-slate-100">
                           {line.content}
                         </span>

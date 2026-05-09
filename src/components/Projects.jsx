@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
-import { Award, Code2, ExternalLink } from 'lucide-react';
+import { Award, Code2, ExternalLink, X } from 'lucide-react';
 import { projects as defaultProjects } from '../data/data';
 
 const Projects = ({ projects = defaultProjects }) => {
   const [activeTab, setActiveTab] = useState('all');
+  const [activeCertificate, setActiveCertificate] = useState(null);
 
   const filtered = activeTab === 'all' ? projects : projects.filter(p => p.category === activeTab);
+
+  const handleOpenCertificate = (project) => {
+    setActiveCertificate(project);
+  };
+
+  const handleCloseCertificate = () => {
+    setActiveCertificate(null);
+  };
 
   return (
     <section id="projects" className="py-24">
@@ -65,14 +74,55 @@ const Projects = ({ projects = defaultProjects }) => {
                 </div>
                 <h3 className="text-xl font-bold mb-2 group-hover:text-cyan-400 transition-colors duration-300 transform group-hover:translate-x-1">{project.title}</h3>
                 <p className="text-sm text-slate-400 leading-relaxed mb-6 flex-1 group-hover:text-slate-300 transition-colors duration-300">{project.desc}</p>
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-bold text-cyan-500 hover:text-cyan-400 transition-all duration-300 group-hover:translate-x-1">
-                  {project.category === 'certificate' ? 'View Certificate' : 'Case Study'} <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-                </a>
+                {project.category === 'certificate' ? (
+                  <button
+                    type="button"
+                    onClick={() => handleOpenCertificate(project)}
+                    className="flex items-center gap-2 text-sm font-bold text-cyan-500 hover:text-cyan-400 transition-all duration-300 group-hover:translate-x-1"
+                  >
+                    View Certificate <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                  </button>
+                ) : (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-bold text-cyan-500 hover:text-cyan-400 transition-all duration-300 group-hover:translate-x-1">
+                    Case Study <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                  </a>
+                )}
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {activeCertificate && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/95 backdrop-blur-xl p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label={activeCertificate.title}
+          onClick={handleCloseCertificate}
+        >
+          <div className="relative max-w-4xl w-full rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl" onClick={(event) => event.stopPropagation()}>
+            <button
+              type="button"
+              onClick={handleCloseCertificate}
+              className="absolute top-4 right-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-800/90 text-slate-100 hover:bg-slate-700"
+              aria-label="Close gallery"
+            >
+              <X className="h-5 w-5" />
+            </button>
+
+            <img
+              src={activeCertificate.image}
+              alt={activeCertificate.title}
+              className="w-full max-h-[80vh] object-contain bg-slate-950"
+            />
+            <div className="p-6">
+              <h3 className="text-2xl font-bold text-slate-100 mb-2">{activeCertificate.title}</h3>
+              <p className="text-slate-400">{activeCertificate.desc}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
